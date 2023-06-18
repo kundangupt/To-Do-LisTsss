@@ -1,14 +1,8 @@
-import Header from "./Component/Header";
-import { Todos } from "./Component/Todos";
+// import Header from "./Component/Header";
+ import { Todos } from "./Component/Todos";
 import { Footer } from "./Component/Footer";
-import { AddTodo } from "./Component/AddTodo";
-import { About } from "./Component/About";
-import React, { useState, useEffect } from 'react';
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch,
-// } from "react-router-dom";
+ import { AddTodo } from "./Component/AddTodo";
+ import React, { useState, useEffect } from 'react';
 function App() {
   let initTodo;
   if (localStorage.getItem("todos") === null) {
@@ -51,11 +45,10 @@ function App() {
   }, [todos])
   return (
     <>
-    <Header title="My Todos List" searchBar={false} />
+    {/* <Header title="My Todos List" searchBar={false} /> */}
       
             <AddTodo addTodo={addTodo} />
-            <Todos todos={todos} onDelete={onDelete} />
-            <About />
+            <Todos todos={todos} onDelete={onDelete} />  
             <Footer />
     </>
   );
